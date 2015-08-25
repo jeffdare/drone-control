@@ -1,0 +1,25 @@
+{
+  "name": "drone-control",
+  "version": "0.0.1",
+  "description": "This is package for drone with bluemix",
+  "main": "drone.js",
+  "dependencies": {
+    "ar-drone": "^0.3.3",
+    "ffmpeg": "^0.0.4",
+    "request": "^2.60.0",
+    "twitter": "*",
+    "ibmiotf" : "*",
+    "cloudant" : "*",
+    "opencv" : "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "drone",
+    "bluemix"
+  ],
+  "author": "jeffdare",
+  "license": "Apache-2.0"
+}
