@@ -54,7 +54,7 @@ try {
           });
         }
 
-      }, 5000);
+      }, 2000);
 
     });
 
@@ -65,8 +65,10 @@ try {
         console.log(payload.toString());
         tweetPic(payload.toString());
       } else if(commandName === "TakeOff") {
+        console.log("Take OFF!!!");
         drone.takeoff();
       } else if(commandName === "Land") {
+        console.log("Land!!!");
         drone.stop();
         drone.land();
       } else {
@@ -111,7 +113,7 @@ try {
 
     function tweetPic (payload) {
 
-      var msg = 'Tweeted from Drone!!!' || payload;
+      var msg = payload || 'Tweeted from Drone!!!';
         
         // Make post request on media endpoint. Pass file data as media parameter
       twitClient.post('media/upload', {media: lastPng}, function(error, media, response){
@@ -165,13 +167,38 @@ try {
     });
 
     //uncomment this for local control of drone
-    /*drone.takeoff();
+    //uncomment this for local control of drone
+    drone.takeoff();
 
-    drone
-      .after(2000, function() {
-        this.stop();
-        this.land();
-      });*/
+  drone
+    .after(3000, function() {
+      this.up(1);
+    })
+    .after(2500, function() {
+      this.stop();
+      this.front(0.2);
+    })
+    .after(2000, function() {
+      this.stop();
+      this.back(0.2);
+    })
+    /*.after(1500, function() {
+      this.stop();
+      this.clockwise(1);
+    })
+    .after(2000, function() {
+      this.stop();
+      this.counterClockwise(1);
+    }) */
+    .after(3000, function() {
+      this.stop();
+    })
+    .after(8000, function() {
+      this.down(1);
+      this.down(1);
+      this.stop();
+      this.land();
+    });
 
 } catch(err) {
   drone.stop();

@@ -1,9 +1,9 @@
 { "iotconfig" : {
     "org" : "eu8zyd",
-    "id" : "drone1",
+    "id" : "Yellow",
     "type" : "drone",
     "auth-method" : "token",
-    "auth-token" : "C4x4WDmVyM1)yu3JWX"
+    "auth-token" : "qwertyu123"
  },
 
 "twitConfig" : {
