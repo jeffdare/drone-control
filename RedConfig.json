@@ -1,0 +1,20 @@
+{ "iotconfig" : {
+    "org" : "eu8zyd",
+    "id" : "Red",
+    "type" : "drone",
+    "auth-method" : "token",
+    "auth-token" : "qwertyu123"
+ },
+
+"twitConfig" : {
+  "consumer_key": "vOxyjCGHLe3rPePiCnVwEimMr",
+  "consumer_secret": "LAvINlE13nZVWuvrFfuPTVrmpPFsyr9EZ27XEWKYUSUQbOTMl8",
+  "access_token_key": "53437508-w2k7yt3BoxWWQs3Xkmian17nNdNdsAhVORJcVn7In",
+  "access_token_secret": "ouj8e2KtbC6ywHl2w3NXpDIDfPRLdgVhJrgW5PNiDx6WL"
+ },
+ "cloudantConfig" : {
+  "user" : "2f5922e8-30f1-4afd-a3b5-45e076b9d948-bluemix",
+  "password" : "f517ae3b84bc2ab3ea98b71ae7ec487678439df39da6e0f18dc2509a90f64d72",
+  "dbName" : "drone"
+ }
+}
